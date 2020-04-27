@@ -12,6 +12,9 @@
 #include <ctype.h>
 #include "Plane.h"
 
+int numberOfPlanes = 0;
+int j;
+
 void initialize()
 {
 	for (int i=0; i<SIZE; i++)
@@ -24,35 +27,18 @@ void initialize()
 
 void askInfo()
 {
-	int numberOfPlanes = 0;
-	printf("How many planes do you want to add? ");
-	scanf("%d",&numberOfPlanes);
-	while (numberOfPlanes>SIZE)
-	{
-		printf("Wrong value! How many planes do you want to add? ");
-		scanf("%d",&numberOfPlanes);
-	}
-	for (int i=0; i<numberOfPlanes; i++)
+    askNumberOfPlanes();
+  
+	
+	for (j=0; j<numberOfPlanes; j++)
 	{
 		printf("\nPlane name: ");
 		getchar();
-		fgets(planeArray[i].name, 30, stdin);
-		printf("Number of seats: ");
-		scanf("%d",&(planeArray[i].seats));
-		while (planeArray[i].seats<=0)
-		{
-			printf("Wrong value! Number of seats: ");
-		scanf("%d",&(planeArray[i].seats));
-		}
-		printf("Wing span: ");
-		scanf("%lf",&(planeArray[i].wingSpan));
-		while (planeArray[i].wingSpan<=0)
-		{
-			printf("Wrong value! Wing span: ");
-		scanf("%lf",&(planeArray[i].wingSpan));
-		}
-	}
+		fgets(planeArray[j].name, 30, stdin);
 
+        askNumberOfSeats();
+        askWingSpan();
+	}
 }
 
 void printPlanes()
@@ -64,6 +50,40 @@ void printPlanes()
 		printf("\nWing span:\t%0.1f",planeArray[i].wingSpan);
 	}
 	printf("\n");
+}
+
+void askNumberOfPlanes()
+{
+	printf("How many planes do you want to add? ");
+	scanf("%d",&numberOfPlanes);
+    if(numberOfPlanes>SIZE)
+	{
+        printf("Wrong Input! ");
+        askNumberOfPlanes();
+
+	}
+}
+
+void askNumberOfSeats()
+{
+    printf("Number of seats: ");
+	scanf("%d",&(planeArray[j].seats));
+	if (planeArray[j].seats<=0)
+	    {
+		    printf("Wrong value! ");
+		    askNumberOfSeats();
+		}
+}
+
+void askWingSpan()
+{
+    printf("Wing span: ");
+	scanf("%lf",&(planeArray[j].wingSpan));
+	if (planeArray[j].wingSpan<=0)
+	{
+		printf("Wrong value! ");
+	    askWingSpan();
+	}   
 }
 
 

@@ -22,5 +22,8 @@ struct plane planeArray[SIZE];
 void initialize();
 void askInfo();
 void printPlanes();
-
+void askNumberOfPlanes();
+void askNumberOfSeats();
+void askNumberOfPlanes();
+void askWingSpan();
 #endif
