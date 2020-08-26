@@ -22,8 +22,8 @@ int get_first_weekDay(int year){
     return day;
 }
 
-void populate_array(){
-
+int** populate_array(int** array){
+	//
 }
 
 int main(){
@@ -33,7 +33,7 @@ int main(){
 	// set current year, so I don't have to change it with every use.
 	year = 2020;
     char *months[]={"January","February","March","April","May","June","July","August","September","October","November","December"};
-	int monthsAndDays[12][31]; // multi-dimensional array of all the days, for indexing later.
+	int monthsAndDays[12][31]; // multi-dimensional array of all the days, for indexing later. Rethink this
 	int monthDays[]={31,28,31,30,31,30,31,31,30,31,30,31};
 	if((year%4==0&&year%100!=0)||year%400==0){
 	        monthDays[1]=29;
@@ -42,6 +42,7 @@ int main(){
 	for(month=0;month<12;month++){
 
 	}
-
+	populate_array(monthsAndDays);
+	printf(monthsAndDays);
 	printf("\033[0m");          // Reset color in terminal
 }
