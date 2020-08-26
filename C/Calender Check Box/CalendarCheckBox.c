@@ -1,15 +1,17 @@
 /*
  ======================================================================================
- Name        : calender.c
+ Name        : calendarCheckBox.c
  Author      : Djordje
  Version     : 1
  Copyright   : no copyright
- Description : Calendar app with the added functionality of crossing out/ marking days.
+ Description : Calendar program with the added functionality of crossing out/ marking days.
  ======================================================================================
  */
 
 //populate the array,
-// user runs program ->
+// user runs program -> calendar is printed/loaded -> user can cross the current day.
+// save and load calendar from txt file
+// option to reset
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -41,5 +43,5 @@ int main(){
 
 	}
 
-
+	printf("\033[0m");          // Reset color in terminal
 }
