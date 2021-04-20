@@ -46,3 +46,6 @@ int main(){
 	printf(monthsAndDays);
 	printf("\033[0m");          // Reset color in terminal
 }
+
+
+// unfinished
