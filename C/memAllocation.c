@@ -29,7 +29,7 @@ int main(void) {
 	strcat(name, "is the best");
 	printf("name string: %s\n", name);
 	
-	// release memory back to the operating system
+	// release memory back to the operating system when done 
 	free(name);
 	free(numbers);
 	
