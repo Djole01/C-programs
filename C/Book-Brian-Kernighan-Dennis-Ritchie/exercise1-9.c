@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/* count blanks, tabs and newlines */
+/* eliminate multiple blank spaces */
 int main()
 {
 	int c, previousChar;

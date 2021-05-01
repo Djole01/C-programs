@@ -3,7 +3,7 @@
 /* copy input to output, replace tabs, backspaces and backslashes with \t, \b and \\ */
 int main()
 {
-	int c, previousChar;
+	int c;
 
 	while((c = getchar()) != EOF)
 	{
