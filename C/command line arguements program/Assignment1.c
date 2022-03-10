@@ -2,7 +2,7 @@
  ============================================================================
  Name        : Assignment1.c
  Author      : Hung Xuan Nguyen
-	       Dorde Obradovic
+	       ****************
  Description : reading integer command line argument.
  ============================================================================
  */
