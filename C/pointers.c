@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+// easy example on points
 int main(){
 
 	int num = 8;
